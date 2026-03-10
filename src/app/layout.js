@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,11 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "BackendRescue — Backend Refactoring & Debugging",
+  metadataBase: new URL("https://backendrescue.dev"),
+  title: {
+    default: "BackendRescue — Backend Refactoring & Debugging",
+    template: "%s | BackendRescue",
+  },
   description:
     "BackendRescue helps teams untangle complex backend systems, reduce technical debt, and stabilize fragile codebases.",
-  metadataBase: new URL("https://backendrescue.dev"),
-
+  keywords: [
+    "backend developer",
+    "backend refactoring",
+    "backend debugging",
+    "technical debt",
+    "node.js developer",
+    "next.js developer",
+    "api debugging",
+    "system stabilization",
+  ],
+  applicationName: "BackendRescue",
+  authors: [{ name: "Curtis Fawcett" }],
+  creator: "Curtis Fawcett",
+  publisher: "BackendRescue",
+  alternates: {
+    canonical: "https://backendrescue.dev",
+  },
   openGraph: {
     title: "BackendRescue — Backend Refactoring & Debugging",
     description:
@@ -24,13 +44,16 @@ export const metadata = {
     url: "https://backendrescue.dev",
     siteName: "BackendRescue",
     type: "website",
+    locale: "en_US",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "BackendRescue",
+    title: "BackendRescue — Backend Refactoring & Debugging",
     description:
       "Backend refactoring, debugging, and system stabilization.",
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
@@ -41,6 +64,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

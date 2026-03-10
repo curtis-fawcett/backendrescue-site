@@ -14,46 +14,38 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://backendrescue.dev"),
+
   title: {
     default: "BackendRescue — Backend Refactoring & Debugging",
     template: "%s | BackendRescue",
   },
+
   description:
-    "BackendRescue helps teams untangle complex backend systems, reduce technical debt, and stabilize fragile codebases.",
-  keywords: [
-    "backend developer",
-    "backend refactoring",
-    "backend debugging",
-    "technical debt",
-    "node.js developer",
-    "next.js developer",
-    "api debugging",
-    "system stabilization",
-  ],
-  applicationName: "BackendRescue",
-  authors: [{ name: "Curtis Fawcett" }],
-  creator: "Curtis Fawcett",
-  publisher: "BackendRescue",
-  alternates: {
-    canonical: "https://backendrescue.dev",
-  },
+    "BackendRescue helps teams untangle complex backend systems, reduce technical debt, and stabilize fragile codebases. Specializing in backend refactoring, debugging, and system reliability.",
+
   openGraph: {
     title: "BackendRescue — Backend Refactoring & Debugging",
     description:
-      "Helping teams clean up complex backend systems and make them reliable again.",
+      "BackendRescue helps teams clean up complex backend systems and make them easier to maintain, debug, and scale.",
     url: "https://backendrescue.dev",
     siteName: "BackendRescue",
-    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: "en_US",
+    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "BackendRescue — Backend Refactoring & Debugging",
     description:
       "Backend refactoring, debugging, and system stabilization.",
-  },
-  icons: {
-    icon: "/favicon.ico",
+    images: ["/og-image.png"],
   },
 };
 

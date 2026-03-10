@@ -111,7 +111,10 @@ export default function Home() {
         )}
       </nav>
 
-      <section className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+      <section className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
+        <div className="pointer-events-none absolute inset-0 -z-10 flex justify-center overflow-hidden">
+          <div className="h-[500px] w-[800px] bg-emerald-500/10 blur-[120px] rounded-full" />
+        </div>
         <div className="grid items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">

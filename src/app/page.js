@@ -1,65 +1,130 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <main className="min-h-screen bg-white text-zinc-900">
+      <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-24">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          BackendRescue
+        </p>
+
+        <h1 className="max-w-4xl text-5xl font-bold tracking-tight text-zinc-950 sm:text-6xl">
+          Untangling complex backend systems.
+        </h1>
+
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600">
+          I help teams clean up fragile backend code so their systems become
+          reliable, maintainable, and easier to work with.
+        </p>
+
+        <div className="mt-10 flex flex-wrap gap-4">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:youremail@example.com"
+            className="rounded-xl bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Contact Me
           </a>
+
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#services"
+            className="rounded-xl border border-zinc-300 px-5 py-3 text-sm font-medium text-zinc-900 transition hover:bg-zinc-100"
           >
-            Documentation
+            View Services
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="services" className="border-t border-zinc-200 bg-zinc-50">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-950">
+            How I help
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="text-lg font-semibold text-zinc-950">
+                Legacy system refactoring
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                I clean up difficult backend code so teams can safely maintain
+                and extend their systems.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="text-lg font-semibold text-zinc-950">
+                Debugging complex logic
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                I trace confusing business logic, identify fragile areas, and
+                help teams fix issues without creating new ones.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="text-lg font-semibold text-zinc-950">
+                System stabilization
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                I make backend systems more reliable, more predictable, and
+                easier for developers to work on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-zinc-200 bg-white">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-950">
+            My approach
+          </h2>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-4">
+            <div className="rounded-2xl bg-zinc-50 p-6">
+              <p className="text-sm font-semibold text-zinc-500">01</p>
+              <h3 className="mt-2 font-semibold text-zinc-950">
+                Understand the flow
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                I start by tracing the system and understanding where logic
+                begins and how data moves through it.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-zinc-50 p-6">
+              <p className="text-sm font-semibold text-zinc-500">02</p>
+              <h3 className="mt-2 font-semibold text-zinc-950">
+                Find the fragile parts
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                I identify confusing, brittle, or hard-to-maintain sections of
+                the backend.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-zinc-50 p-6">
+              <p className="text-sm font-semibold text-zinc-500">03</p>
+              <h3 className="mt-2 font-semibold text-zinc-950">
+                Refactor safely
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                I improve structure and readability while protecting the
+                behavior the system depends on.
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-zinc-50 p-6">
+              <p className="text-sm font-semibold text-zinc-500">04</p>
+              <h3 className="mt-2 font-semibold text-zinc-950">
+                Leave it clearer
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                The goal is simple: a backend system your team can understand,
+                trust, and build on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

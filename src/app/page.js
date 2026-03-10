@@ -424,7 +424,7 @@ export default function Home() {
         <div className="mt-4 flex justify-center gap-6">
           <a
             href="https://github.com/"
-            target="_blank"
+            target="curtis-fawcett"
             rel="noreferrer"
             className="transition hover:text-zinc-900"
           >
@@ -433,7 +433,7 @@ export default function Home() {
 
           <a
             href="https://linkedin.com/"
-            target="_blank"
+            target="curtis-fawcett-8a5a7922a"
             rel="noreferrer"
             className="transition hover:text-zinc-900"
           >

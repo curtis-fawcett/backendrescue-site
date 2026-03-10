@@ -446,7 +446,7 @@ export default function Home() {
               </p>
 
               <a
-                href="mailto:fawcett.curtis@gmail.com"
+                href="mailto:hello@backendrescue.dev"
                 className="mt-8 inline-block rounded-xl bg-white px-6 py-3 text-sm font-medium text-zinc-950 transition hover:bg-zinc-200"
               >
                 Email BackendRescue
@@ -470,10 +470,10 @@ export default function Home() {
           </p>
 
           <a
-            href="mailto:fawcett.curtis@gmail.com"
+            href="mailto:hello@backendrescue.dev"
             className="mt-8 inline-block rounded-xl border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-900 transition hover:border-emerald-600 hover:text-emerald-700"
           >
-            fawcett.curtis@gmail.com
+            hello@backendrescue.dev
           </a>
 
           <p className="mt-4 text-sm text-zinc-500">backendrescue.dev</p>

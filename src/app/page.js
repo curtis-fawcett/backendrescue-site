@@ -24,7 +24,7 @@ export default function Home() {
               Services
             </a>
             <a href="#projects" className="transition hover:text-zinc-950">
-              Projects
+              Selected Work
             </a>
             <a href="#problems" className="transition hover:text-zinc-950">
               Problems
@@ -69,7 +69,7 @@ export default function Home() {
                 onClick={closeMenu}
                 className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
               >
-                Projects
+                Selected Work
               </a>
               <a
                 href="#problems"
@@ -148,6 +148,25 @@ export default function Home() {
                 View Services
               </a>
             </div>
+
+            <div className="mt-6 flex flex-wrap gap-4 text-sm text-zinc-500">
+              <a
+                href="https://github.com/curtis-fawcett"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-zinc-900"
+              >
+                View GitHub →
+              </a>
+              <a
+                href="https://www.linkedin.com/in/curtis-fawcett-8a5a7922a"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-zinc-900"
+              >
+                Connect on LinkedIn →
+              </a>
+            </div>
           </div>
 
           <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-6 sm:p-8">
@@ -222,7 +241,7 @@ export default function Home() {
 
       <section id="projects" className="border-t border-zinc-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl font-bold text-zinc-950">Example Project</h2>
+          <h2 className="text-3xl font-bold text-zinc-950">Selected Work</h2>
 
           <div className="mt-10 grid gap-8 rounded-3xl border border-zinc-200 bg-zinc-50 p-8 md:grid-cols-2">
             <div>
@@ -360,13 +379,19 @@ export default function Home() {
 
           <div>
             <p className="leading-8 text-zinc-600">
-              I help teams untangle backend systems that have become difficult
-              to understand, maintain, or safely change.
+              I started BackendRescue to help teams deal with backend systems
+              that have become difficult to understand, maintain, or safely
+              change. I’m especially interested in the kinds of problems that
+              slow teams down: messy logic, fragile code paths, recurring bugs,
+              and technical debt.
             </p>
 
             <p className="mt-4 leading-8 text-zinc-600">
-              My focus is practical improvement that reduces risk, improves
-              clarity, and makes systems less stressful to work on.
+              My goal is simple: make backend systems clearer, more stable, and
+              less stressful to work on. Right now, BackendRescue is focused on
+              hands-on backend improvement work. Over time, I plan to turn the
+              patterns and lessons from that work into useful tools, products,
+              and SaaS solutions.
             </p>
           </div>
         </div>
@@ -398,7 +423,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="border-t border-zinc-200 bg-zinc-50">
+      <section className="border-t border-zinc-200 bg-zinc-50">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
+              Looking ahead
+            </p>
+            <h2 className="mt-3 text-3xl font-bold text-zinc-950">
+              Building from service work toward tools and products
+            </h2>
+            <p className="mt-4 leading-8 text-zinc-600">
+              BackendRescue starts with practical backend cleanup, refactoring,
+              and debugging work. The long-term goal is to grow from hands-on
+              services into useful software products shaped by real-world
+              backend problems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="border-t border-zinc-200 bg-white">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
           <h2 className="text-3xl font-bold text-zinc-950">
             Let’s talk about your backend
@@ -423,8 +467,8 @@ export default function Home() {
 
         <div className="mt-4 flex justify-center gap-6">
           <a
-            href="https://github.com/"
-            target="curtis-fawcett"
+            href="https://github.com/curtis-fawcett"
+            target="_blank"
             rel="noreferrer"
             className="transition hover:text-zinc-900"
           >
@@ -432,8 +476,8 @@ export default function Home() {
           </a>
 
           <a
-            href="https://linkedin.com/"
-            target="curtis-fawcett-8a5a7922a"
+            href="https://www.linkedin.com/in/curtis-fawcett-8a5a7922a"
+            target="_blank"
             rel="noreferrer"
             className="transition hover:text-zinc-900"
           >

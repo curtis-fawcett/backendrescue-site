@@ -7,6 +7,16 @@ export default function Home() {
 
   const closeMenu = () => setOpen(false);
 
+  const navLinks = [
+    { href: "#services", label: "Services" },
+    { href: "#results", label: "Results" },
+    { href: "#who-i-help", label: "Who I Help" },
+    { href: "#problems", label: "Problems" },
+    { href: "#process", label: "Process" },
+    { href: "#about", label: "About" },
+    { href: "#contact", label: "Contact" },
+  ];
+
   return (
     <main className="min-h-screen bg-white text-zinc-900">
       <nav className="sticky top-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur">
@@ -20,27 +30,15 @@ export default function Home() {
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-zinc-600 md:flex">
-            <a href="#services" className="transition hover:text-zinc-950">
-              Services
-            </a>
-            <a href="#projects" className="transition hover:text-zinc-950">
-              Selected Work
-            </a>
-            <a href="#problems" className="transition hover:text-zinc-950">
-              Problems
-            </a>
-            <a href="#approach" className="transition hover:text-zinc-950">
-              Approach
-            </a>
-            <a href="#about" className="transition hover:text-zinc-950">
-              About
-            </a>
-            <a href="#tech" className="transition hover:text-zinc-950">
-              Tech
-            </a>
-            <a href="#contact" className="transition hover:text-zinc-950">
-              Contact
-            </a>
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-zinc-950"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           <button
@@ -57,55 +55,16 @@ export default function Home() {
         {open && (
           <div className="border-t border-zinc-200 bg-white md:hidden">
             <div className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4 text-sm text-zinc-700">
-              <a
-                href="#services"
-                onClick={closeMenu}
-                className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
-              >
-                Services
-              </a>
-              <a
-                href="#projects"
-                onClick={closeMenu}
-                className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
-              >
-                Selected Work
-              </a>
-              <a
-                href="#problems"
-                onClick={closeMenu}
-                className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
-              >
-                Problems
-              </a>
-              <a
-                href="#approach"
-                onClick={closeMenu}
-                className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
-              >
-                Approach
-              </a>
-              <a
-                href="#about"
-                onClick={closeMenu}
-                className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
-              >
-                About
-              </a>
-              <a
-                href="#tech"
-                onClick={closeMenu}
-                className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
-              >
-                Tech
-              </a>
-              <a
-                href="#contact"
-                onClick={closeMenu}
-                className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
-              >
-                Contact
-              </a>
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="rounded-lg px-2 py-2 transition hover:bg-zinc-100"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         )}
@@ -113,35 +72,36 @@ export default function Home() {
 
       <section className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
         <div className="pointer-events-none absolute inset-0 -z-10 flex justify-center overflow-hidden">
-          <div className="h-[500px] w-[800px] bg-emerald-500/10 blur-[120px] rounded-full" />
+          <div className="h-[500px] w-[850px] rounded-full bg-emerald-500/10 blur-[120px]" />
         </div>
-        <div className="grid items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]">
+
+        <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
               BackendRescue
             </p>
 
             <h1 className="text-5xl font-bold tracking-tight text-zinc-950 sm:text-6xl md:text-7xl">
-              Untangling backend systems that have become hard to trust.
+              Fixing backend systems that have become hard to trust.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600 sm:text-xl">
-              I help teams clean up fragile backend code, reduce technical debt,
-              and stabilize messy systems so they become easier to maintain,
-              debug, and scale.
+              I help small teams and growing businesses clean up fragile backend
+              code, debug recurring issues, and stabilize systems that have
+              become difficult to maintain.
             </p>
 
-            <p className="mt-4 text-sm text-zinc-500">
-              Built by Curtis Fawcett for teams that need practical backend
-              help.
+            <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-500">
+              If your backend feels brittle, confusing, or risky to change,
+              BackendRescue helps make it clearer, safer, and easier to work on.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="mailto:hello@backendrescue.dev"
+                href="mailto:hello@backendrescue.dev?subject=Backend%20help%20request"
                 className="rounded-xl bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
               >
-                Start a Conversation
+                Request Backend Help
               </a>
 
               <a
@@ -153,50 +113,49 @@ export default function Home() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-4 text-sm text-zinc-500">
-              <a
-                href="https://github.com/curtis-fawcett"
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-zinc-900"
-              >
-                View GitHub →
-              </a>
-              <a
-                href="https://www.linkedin.com/in/curtis-fawcett-8a5a7922a"
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-zinc-900"
-              >
-                Connect on LinkedIn →
-              </a>
+              <span>Refactoring</span>
+              <span>•</span>
+              <span>Debugging</span>
+              <span>•</span>
+              <span>Stabilization</span>
+              <span>•</span>
+              <span>Internal tools</span>
             </div>
           </div>
 
           <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-6 sm:p-8">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
-              Focus areas
+              When to bring me in
             </p>
 
             <div className="mt-6 space-y-5">
               <div className="rounded-2xl bg-white p-5 shadow-sm">
-                <p className="font-semibold text-zinc-950">Refactoring</p>
+                <p className="font-semibold text-zinc-950">
+                  Production bugs keep returning
+                </p>
                 <p className="mt-2 text-sm leading-7 text-zinc-600">
-                  Clean up difficult backend code without breaking production
-                  behavior.
+                  The same issues keep resurfacing because the underlying logic
+                  is brittle or unclear.
                 </p>
               </div>
 
               <div className="rounded-2xl bg-white p-5 shadow-sm">
-                <p className="font-semibold text-zinc-950">Debugging</p>
+                <p className="font-semibold text-zinc-950">
+                  The backend feels risky to change
+                </p>
                 <p className="mt-2 text-sm leading-7 text-zinc-600">
-                  Trace confusing logic and isolate the real issue faster.
+                  Small edits create side effects, slow releases, or break
+                  unrelated behavior.
                 </p>
               </div>
 
               <div className="rounded-2xl bg-white p-5 shadow-sm">
-                <p className="font-semibold text-zinc-950">Stabilization</p>
+                <p className="font-semibold text-zinc-950">
+                  Your team needs clarity fast
+                </p>
                 <p className="mt-2 text-sm leading-7 text-zinc-600">
-                  Make systems easier for teams to trust, support, and extend.
+                  You need someone to trace the mess, identify the real problem,
+                  and leave the system in a better state.
                 </p>
               </div>
             </div>
@@ -206,26 +165,32 @@ export default function Home() {
 
       <section id="services" className="border-t border-zinc-200 bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl font-bold text-zinc-950">Services</h2>
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold text-zinc-950">Services</h2>
+            <p className="mt-4 leading-8 text-zinc-600">
+              Practical backend help for teams dealing with instability,
+              technical debt, and hard-to-debug systems.
+            </p>
+          </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
               <h3 className="font-semibold text-zinc-950">
-                Legacy system refactoring
+                Backend refactoring
               </h3>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                Clean up backend code so it becomes easier to understand,
-                maintain, and safely extend.
+                Clean up confusing backend code so it becomes easier to read,
+                safer to change, and less stressful to maintain.
               </p>
             </div>
 
             <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
               <h3 className="font-semibold text-zinc-950">
-                Debugging complex logic
+                Bug investigation & debugging
               </h3>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                Track down confusing bugs, fragile logic, and hidden failure
-                points.
+                Track down recurring issues, hidden failure points, and complex
+                logic problems that waste team time.
               </p>
             </div>
 
@@ -234,62 +199,161 @@ export default function Home() {
                 System stabilization
               </h3>
               <p className="mt-3 text-sm leading-7 text-zinc-600">
-                Improve reliability and structure so your backend stops slowing
-                the team down.
+                Reduce fragility, improve structure, and make backend systems
+                more reliable for day-to-day development.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" className="border-t border-zinc-200 bg-white">
+      <section id="results" className="border-t border-zinc-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl font-bold text-zinc-950">Selected Work</h2>
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold text-zinc-950">
+              What clients get
+            </h2>
+            <p className="mt-4 leading-8 text-zinc-600">
+              BackendRescue is built around outcomes that matter to real teams,
+              not just code changes.
+            </p>
+          </div>
 
-          <div className="mt-10 grid gap-8 rounded-3xl border border-zinc-200 bg-zinc-50 p-8 md:grid-cols-2">
-            <div>
-              <h3 className="text-xl font-semibold text-zinc-950">
-                BackendRescue Website
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-600">
+                Clearer systems
+              </p>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                Cleaner logic, better structure, and backend flows that are
+                easier to understand.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-600">
+                More stability
+              </p>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                Fewer repeat issues, fewer risky changes, and more confidence in
+                production behavior.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-600">
+                Faster momentum
+              </p>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                Less time wasted untangling old problems and more time spent
+                building forward.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-zinc-200 bg-zinc-50 p-8">
+            <h3 className="text-xl font-semibold text-zinc-950">
+              Good fit for projects like:
+            </h3>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <div className="rounded-2xl bg-white p-5">
+                <p className="font-medium text-zinc-950">
+                  Backend cleanup before growth
+                </p>
+                <p className="mt-2 text-sm leading-7 text-zinc-600">
+                  When a system technically works, but the codebase is getting
+                  harder to trust as the business grows.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-white p-5">
+                <p className="font-medium text-zinc-950">
+                  Recurring bug investigations
+                </p>
+                <p className="mt-2 text-sm leading-7 text-zinc-600">
+                  When the same production issues keep coming back and the team
+                  needs root-cause clarity.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-white p-5">
+                <p className="font-medium text-zinc-950">
+                  Refactoring brittle logic
+                </p>
+                <p className="mt-2 text-sm leading-7 text-zinc-600">
+                  When important backend code has become too tangled to extend
+                  safely.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-white p-5">
+                <p className="font-medium text-zinc-950">
+                  Internal tool support
+                </p>
+                <p className="mt-2 text-sm leading-7 text-zinc-600">
+                  When a business needs practical, focused developer help behind
+                  the scenes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="who-i-help"
+        className="border-t border-zinc-200 bg-zinc-50"
+      >
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold text-zinc-950">Who I help</h2>
+            <p className="mt-4 leading-8 text-zinc-600">
+              BackendRescue is a strong fit for organizations that need focused
+              backend help without the overhead of a large agency.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="font-semibold text-zinc-950">Small businesses</h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                For businesses relying on software that has become difficult to
+                support or risky to change.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="font-semibold text-zinc-950">Startups</h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                For growing teams that need to reduce technical debt and improve
+                backend reliability before it slows them down.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+              <h3 className="font-semibold text-zinc-950">
+                Teams with messy systems
               </h3>
-
-              <p className="mt-4 leading-8 text-zinc-600">
-                A modern service website built with Next.js and Tailwind CSS to
-                present backend-focused services clearly and professionally.
+              <p className="mt-3 text-sm leading-7 text-zinc-600">
+                For teams dealing with hard-to-follow logic, fragile changes,
+                and recurring backend pain.
               </p>
-
-              <p className="mt-4 leading-8 text-zinc-600">
-                The project focuses on clear messaging, strong hierarchy,
-                responsive layout, and a polished foundation that can grow as
-                the brand grows.
-              </p>
-            </div>
-
-            <div className="space-y-5 text-sm">
-              <div>
-                <p className="font-semibold text-zinc-500">Technologies</p>
-                <p className="mt-1 text-zinc-700">
-                  Next.js · React · Tailwind CSS · Vercel
-                </p>
-              </div>
-
-              <div>
-                <p className="font-semibold text-zinc-500">Outcome</p>
-                <p className="mt-1 text-zinc-700">
-                  A fast, responsive, production-ready site for presenting a
-                  solo backend developer brand.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="problems" className="border-t border-zinc-200 bg-zinc-50">
+      <section id="problems" className="border-t border-zinc-200 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl font-bold text-zinc-950">Problems I Solve</h2>
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold text-zinc-950">
+              Problems I solve
+            </h2>
+            <p className="mt-4 leading-8 text-zinc-600">
+              These are the kinds of backend issues that quietly drain time,
+              confidence, and delivery speed.
+            </p>
+          </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
               <h3 className="font-semibold text-zinc-950">
                 Hard-to-follow code paths
               </h3>
@@ -298,7 +362,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
               <h3 className="font-semibold text-zinc-950">
                 Fragile backend changes
               </h3>
@@ -307,7 +371,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
               <h3 className="font-semibold text-zinc-950">
                 Recurring production issues
               </h3>
@@ -316,7 +380,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
               <h3 className="font-semibold text-zinc-950">
                 Technical debt slowing teams
               </h3>
@@ -328,38 +392,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="approach" className="border-t border-zinc-200 bg-white">
+      <section id="process" className="border-t border-zinc-200 bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl font-bold text-zinc-950">My Approach</h2>
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold text-zinc-950">Process</h2>
+            <p className="mt-4 leading-8 text-zinc-600">
+              A practical approach focused on reducing confusion, identifying
+              root causes, and leaving the backend in a stronger state.
+            </p>
+          </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-4">
             {[
               {
                 number: "01",
-                title: "Understand",
-                text: "Trace the flow before making risky assumptions.",
+                title: "Assess",
+                text: "Understand the backend flow, constraints, and risk before making changes.",
               },
               {
                 number: "02",
-                title: "Identify",
-                text: "Find the brittle parts and the real root causes.",
+                title: "Trace",
+                text: "Follow the logic carefully to identify brittle areas and root causes.",
               },
               {
                 number: "03",
-                title: "Refactor",
-                text: "Improve structure while protecting important behavior.",
+                title: "Improve",
+                text: "Refactor or fix the system with stability, clarity, and maintainability in mind.",
               },
               {
                 number: "04",
-                title: "Clarify",
-                text: "Leave the backend easier to understand and maintain.",
+                title: "Leave it stronger",
+                text: "Make the code easier to trust, easier to support, and easier to extend.",
               },
             ].map((step) => (
-              <div key={step.number} className="rounded-2xl bg-zinc-50 p-6">
+              <div key={step.number} className="rounded-2xl bg-white p-6">
                 <p className="font-semibold text-emerald-600">{step.number}</p>
-                <p className="mt-2 font-semibold text-zinc-950">
-                  {step.title}
-                </p>
+                <p className="mt-2 font-semibold text-zinc-950">{step.title}</p>
                 <p className="mt-3 text-sm leading-7 text-zinc-600">
                   {step.text}
                 </p>
@@ -369,7 +437,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="border-t border-zinc-200 bg-zinc-50">
+      <section id="about" className="border-t border-zinc-200 bg-white">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
@@ -382,65 +450,50 @@ export default function Home() {
 
           <div>
             <p className="leading-8 text-zinc-600">
-              I started BackendRescue to help teams deal with backend systems
-              that have become difficult to understand, maintain, or safely
-              change. I’m especially interested in the kinds of problems that
-              slow teams down: messy logic, fragile code paths, recurring bugs,
-              and technical debt.
+              I started BackendRescue to help businesses and teams deal with
+              backend systems that have become difficult to understand, maintain,
+              or safely change. I’m especially drawn to the kinds of problems
+              that slow real work down: messy logic, fragile code paths,
+              recurring bugs, and technical debt.
             </p>
 
             <p className="mt-4 leading-8 text-zinc-600">
               My goal is simple: make backend systems clearer, more stable, and
-              less stressful to work on. Right now, BackendRescue is focused on
-              hands-on backend improvement work. Over time, I plan to turn the
-              patterns and lessons from that work into useful tools, products,
-              and SaaS solutions.
+              less stressful to work on. BackendRescue is focused on practical,
+              hands-on backend improvement work for clients who need real help,
+              not fluff.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="tech" className="border-t border-zinc-200 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-3xl font-bold text-zinc-950">Tech</h2>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-            {[
-              "JavaScript",
-              "TypeScript",
-              "Node.js",
-              "Next.js",
-              "APIs",
-              "Databases",
-              "Authentication",
-              "Debugging",
-            ].map((tech) => (
-              <div
-                key={tech}
-                className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 text-sm text-zinc-700"
-              >
-                {tech}
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       <section className="border-t border-zinc-200 bg-zinc-50">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
-              Looking ahead
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-zinc-950">
-              Building from service work toward tools and products
-            </h2>
-            <p className="mt-4 leading-8 text-zinc-600">
-              BackendRescue starts with practical backend cleanup, refactoring,
-              and debugging work. The long-term goal is to grow from hands-on
-              services into useful software products shaped by real-world
-              backend problems.
-            </p>
+          <div className="rounded-3xl border border-zinc-200 bg-white p-8 md:p-10">
+            <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                  Need help?
+                </p>
+                <h2 className="mt-3 text-3xl font-bold text-zinc-950">
+                  If your backend feels brittle, confusing, or risky to change,
+                  let’s talk.
+                </h2>
+                <p className="mt-4 max-w-2xl leading-8 text-zinc-600">
+                  Send a short note about what’s going wrong, what stack you’re
+                  using, and where things feel stuck.
+                </p>
+              </div>
+
+              <div>
+                <a
+                  href="mailto:hello@backendrescue.dev?subject=Backend%20help%20request"
+                  className="inline-block rounded-xl bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+                >
+                  Email BackendRescue
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -448,20 +501,32 @@ export default function Home() {
       <section id="contact" className="border-t border-zinc-200 bg-white">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
           <h2 className="text-3xl font-bold text-zinc-950">
-            Let’s talk about your backend
+            Start a conversation
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl leading-8 text-zinc-600">
-            If your backend feels brittle or difficult to maintain, I’d be glad
-            to hear what’s going on.
+            Tell me what your backend is doing, what’s breaking, or what feels
+            too risky to touch. I’ll take a look and we can talk through next
+            steps.
           </p>
 
-          <a
-            href="mailto:hello@backendrescue.dev"
-            className="mt-8 inline-block rounded-xl border border-zinc-300 px-6 py-3 transition hover:border-emerald-600 hover:text-emerald-700"
-          >
-            hello@backendrescue.dev
-          </a>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="mailto:hello@backendrescue.dev?subject=Backend%20help%20request"
+              className="inline-block rounded-xl bg-zinc-950 px-6 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+            >
+              hello@backendrescue.dev
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/curtis-fawcett-8a5a7922a"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block rounded-xl border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-900 transition hover:border-emerald-600 hover:text-emerald-700"
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
         </div>
       </section>
 

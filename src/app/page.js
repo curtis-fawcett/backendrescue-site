@@ -9,6 +9,7 @@ export default function Home() {
 
   const navLinks = [
     { href: "#services", label: "Services" },
+    { href: "/projects", label: "Projects" },
     { href: "#results", label: "Results" },
     { href: "#who-i-help", label: "Who I Help" },
     { href: "#problems", label: "Problems" },

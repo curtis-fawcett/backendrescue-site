@@ -54,13 +54,22 @@ export default function ProjectsPage() {
               key={project.title}
               className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-lg transition duration-300 hover:-translate-y-2 hover:border-zinc-600 hover:shadow-xl"
             >
-
               <div className="overflow-hidden border-b border-zinc-800 mb-4">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-56 w-full object-cover transition duration-500 hover:scale-105"
-                />
+                {project.caseStudy ? (
+                  <a href={project.caseStudy}>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-56 w-full object-cover transition duration-500 hover:scale-105"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-56 w-full object-cover"
+                  />
+                )}
               </div>
 
               <h2 className="text-2xl font-semibold">
@@ -85,13 +94,13 @@ export default function ProjectsPage() {
               <div className="mt-6 flex gap-3">
 
                 {project.caseStudy && (
-                  <a
-                    href={project.caseStudy}
-                    className="rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-900"
-                  >
-                    Case Study
-                  </a>
-                )}
+                <a
+                  href={project.caseStudy}
+                  className="rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-900"
+                >
+                  Case Study
+                </a>
+              )}
 
                 {project.github && (
                   <a

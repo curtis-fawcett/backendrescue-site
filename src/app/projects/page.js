@@ -6,6 +6,7 @@ const projects = [
     tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/curtis-fawcett/TrackQA",
     image: "/projects/trackqa.png",
+    caseStudy: "/case-study/trackqa",
   },
   {
     title: "Backend Architecture Refactor",
@@ -82,6 +83,15 @@ export default function ProjectsPage() {
               </div>
 
               <div className="mt-6 flex gap-3">
+
+                {project.caseStudy && (
+                  <a
+                    href={project.caseStudy}
+                    className="rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-900"
+                  >
+                    Case Study
+                  </a>
+                )}
 
                 {project.github && (
                   <a

@@ -2,34 +2,28 @@ const projects = [
   {
     title: "TrackQA Task Manager",
     description:
-      "A lightweight task management system designed to track development work through stages like New, In Progress, Testing, and Completed. Built to help manage client requests and development workflows efficiently.",
+      "A lightweight task management system designed to track development work through stages like New, In Progress, Testing, and Completed. Built to manage debugging, QA, and development workflows.",
     tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/curtis-fawcett/TrackQA",
-    live: "",
-  },
-  {
-    title: "BackendRescue Dashboard",
-    description:
-      "A responsive development dashboard designed to manage debugging, refactoring, and project workflows. The interface focuses on clarity and stability across different screen sizes.",
-    tech: ["Next.js", "React", "Tailwind CSS"],
-    github: "",
-    live: "",
+    image: "/projects/trackqa.png",
   },
   {
     title: "Backend Architecture Refactor",
     description:
-      "A case study focused on improving project architecture, refactoring existing code, and organizing the development structure to improve maintainability and scalability.",
-    tech: ["JavaScript", "Git", "GitHub", "Project Architecture"],
-    github: "https://github.com/curtis-fawcett/backendrescue-refactor-case-study",
-    live: "",
+      "A refactor-focused backend case study demonstrating improvements to project structure, controller-service-repository architecture, and maintainable code organization.",
+    tech: ["Node.js", "JavaScript", "Git", "GitHub"],
+    github:
+      "https://github.com/curtis-fawcett/backendrescue-refactor-case-study",
+    image: "/projects/backend-architecture-refactor.png",
   },
   {
     title: "BackendRescue Website",
     description:
-      "The official business website for BackendRescue. Built to present services, portfolio projects, and client contact options using a modern and responsive design.",
+      "The official website for BackendRescue built with Next.js and deployed online. Designed to showcase services, projects, and development workflow tools.",
     tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
     github: "https://github.com/curtis-fawcett/backendrescue-site",
     live: "https://backendrescue.dev",
+    image: "/projects/backendrescue-website.png",
   },
 ];
 
@@ -57,8 +51,17 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-lg"
+              className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-lg transition duration-300 hover:-translate-y-2 hover:border-zinc-600 hover:shadow-xl"
             >
+
+              <div className="overflow-hidden border-b border-zinc-800 mb-4">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-56 w-full object-cover transition duration-500 hover:scale-105"
+                />
+              </div>
+
               <h2 className="text-2xl font-semibold">
                 {project.title}
               </h2>

@@ -22,12 +22,12 @@ export default function Home() {
     <main className="min-h-screen bg-white text-zinc-900">
       <nav className="sticky top-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a
-            href="#"
-            className="text-lg font-semibold tracking-tight"
-            onClick={closeMenu}
-          >
-            Backend<span className="text-emerald-600">Rescue</span>
+          <a href="#" className="flex items-center" onClick={closeMenu}>
+            <img
+              src="/logos/backendrescue-logo-navbar.png"
+              alt="BackendRescue Logo"
+              className="h-10 w-auto"
+            />
           </a>
 
           <div className="hidden items-center gap-6 text-sm text-zinc-600 md:flex">

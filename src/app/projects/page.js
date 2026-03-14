@@ -16,6 +16,8 @@ const projects = [
     github:
       "https://github.com/curtis-fawcett/backendrescue-refactor-case-study",
     image: "/projects/backend-architecture-refactor.png",
+    
+    // caseStudy: "/case-study/backend-refactor",
   },
   {
     title: "BackendRescue Website",
@@ -25,6 +27,8 @@ const projects = [
     github: "https://github.com/curtis-fawcett/backendrescue-site",
     live: "https://backendrescue.dev",
     image: "/projects/backendrescue-website.png",
+    
+    // caseStudy: "/case-study/backendrescue-site",
   },
 ];
 
@@ -54,6 +58,7 @@ export default function ProjectsPage() {
               key={project.title}
               className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6 shadow-lg transition duration-300 hover:-translate-y-2 hover:border-zinc-600 hover:shadow-xl"
             >
+
               <div className="overflow-hidden border-b border-zinc-800 mb-4">
                 {project.caseStudy ? (
                   <a href={project.caseStudy}>
@@ -94,13 +99,13 @@ export default function ProjectsPage() {
               <div className="mt-6 flex gap-3">
 
                 {project.caseStudy && (
-                <a
-                  href={project.caseStudy}
-                  className="rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-900"
-                >
-                  Case Study
-                </a>
-              )}
+                  <a
+                    href={project.caseStudy}
+                    className="rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-900"
+                  >
+                    Case Study
+                  </a>
+                )}
 
                 {project.github && (
                   <a
@@ -125,6 +130,7 @@ export default function ProjectsPage() {
                 )}
 
               </div>
+
             </article>
           ))}
         </div>

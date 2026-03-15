@@ -16,8 +16,7 @@ const projects = [
     github:
       "https://github.com/curtis-fawcett/backendrescue-refactor-case-study",
     image: "/projects/backend-architecture-refactor.png",
-    
-    // caseStudy: "/case-study/backend-refactor",
+    caseStudy: "/case-study/backend-architecture-refactor",
   },
   {
     title: "BackendRescue Website",

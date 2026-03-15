@@ -111,6 +111,13 @@ export default function Home() {
               >
                 View Services
               </a>
+
+              <a
+                href="/health-check"
+                className="rounded-xl border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-900 transition hover:border-emerald-600 hover:text-emerald-700"
+              >
+                Run a Free Backend Check
+              </a>
             </div>
 
             <div className="mt-6 flex flex-wrap gap-4 text-sm text-zinc-500">

@@ -1,17 +1,8 @@
 const projects = [
   {
-    title: "TrackQA Task Manager",
-    description:
-      "A lightweight task management system designed to track development work through stages like New, In Progress, Testing, and Completed. Built to manage debugging, QA, and development workflows.",
-    tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
-    github: "https://github.com/curtis-fawcett/TrackQA",
-    image: "/projects/trackqa.png",
-    caseStudy: "/case-study/trackqa",
-  },
-  {
     title: "Backend Architecture Refactor",
     description:
-      "A refactor-focused backend case study demonstrating improvements to project structure, controller-service-repository architecture, and maintainable code organization.",
+      "Refactoring a growing Express backend into a layered architecture to improve maintainability, debugging clarity, and separation of concerns.",
     tech: ["Node.js", "JavaScript", "Git", "GitHub"],
     github:
       "https://github.com/curtis-fawcett/backendrescue-refactor-case-study",
@@ -19,14 +10,22 @@ const projects = [
     caseStudy: "/case-study/backend-architecture-refactor",
   },
   {
+    title: "TrackQA Internal Workflow System",
+    description:
+      "An internal workflow system built to manage debugging tasks, refactors, technical debt, and QA work across BackendRescue projects. Designed to bring structure and visibility to active development work.",
+    tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/curtis-fawcett/TrackQA",
+    image: "/projects/trackqa.png",
+    caseStudy: "/case-study/trackqa",
+  },
+  {
     title: "BackendRescue Website",
     description:
-      "The official website for BackendRescue built with Next.js and deployed online. Designed to showcase services, projects, and development workflow tools.",
+      "The public website for BackendRescue, built to present services, engineering case studies, and internal tooling in a clear, professional format.",
     tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
     github: "https://github.com/curtis-fawcett/backendrescue-site",
     live: "https://backendrescue.dev",
     image: "/projects/backendrescue-website.png",
-    
     // caseStudy: "/case-study/backendrescue-site",
   },
 ];
@@ -38,20 +37,33 @@ export default function ProjectsPage() {
 
         <div className="mb-12">
           <p className="mb-3 text-sm uppercase tracking-[0.2em] text-zinc-400">
-            Portfolio
+            Case Studies
           </p>
 
           <h1 className="text-4xl font-bold sm:text-5xl">
-            Projects
+            Engineering Case Studies
           </h1>
 
           <p className="mt-4 max-w-2xl text-zinc-300">
-            A selection of development projects focused on workflow tools,
-            debugging systems, and practical web applications.
+            Real engineering work focused on debugging complex systems,
+            refactoring backend architecture, and building internal developer 
+            tools.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="mb-12 rounded-2xl border border-zinc-800 bg-zinc-950 p-6 sm:p-8">
+          <h2 className="text-xl font-semibold text-white">
+            What these case studies demonstrate
+          </h2>
+
+          <p className="mt-4 max-w-3xl text-zinc-300 leading-8">
+            These case studies highlight the kind of engineering work BackendRescue is
+            built around: debugging fragile systems, refactoring backend architecture,
+            and creating internal tools that support real development workflows.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-10">
           {projects.map((project) => (
             <article
               key={project.title}
@@ -64,14 +76,14 @@ export default function ProjectsPage() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="h-56 w-full object-cover transition duration-500 hover:scale-105"
+                      className="h-72 w-full object-contain transition duration-500 hover:scale-105"
                     />
                   </a>
                 ) : (
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-56 w-full object-cover"
+                    className="h-72 w-full object-contain"
                   />
                 )}
               </div>
@@ -102,7 +114,7 @@ export default function ProjectsPage() {
                     href={project.caseStudy}
                     className="rounded-lg border border-zinc-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-900"
                   >
-                    Case Study
+                    Read Case Study
                   </a>
                 )}
 

@@ -9,7 +9,7 @@ export default function Home() {
 
   const navLinks = [
     { href: "#services", label: "Services" },
-    { href: "/projects", label: "Projects" },
+    { href: "/projects", label: "Case Studies" },
     { href: "#results", label: "Results" },
     { href: "#who-i-help", label: "Who I Help" },
     { href: "#problems", label: "Problems" },
@@ -168,6 +168,115 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-zinc-200 bg-white px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600">
+            How I Fix Systems
+          </p>
+
+          <h2 className="max-w-3xl text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+            A clear process for debugging and stabilizing backend systems
+          </h2>
+
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-zinc-600">
+            I work through backend problems in a structured way so recurring bugs,
+            fragile logic, and risky systems can be understood clearly and improved
+            safely.
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900">
+                Reproduce the issue
+              </h3>
+              <p className="mt-3 text-base leading-7 text-zinc-600">
+                I start by recreating the bug or instability so the behavior can be
+                observed clearly instead of guessed at.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900">
+                Trace the backend flow
+              </h3>
+              <p className="mt-3 text-base leading-7 text-zinc-600">
+                I follow the request through routes, services, database calls, and
+                business logic to understand where trust breaks down.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900">
+                Isolate the root cause
+              </h3>
+              <p className="mt-3 text-base leading-7 text-zinc-600">
+                I look for the real source of the issue, whether that is fragile
+                logic, weak structure, missing validation, or technical debt.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-zinc-200 bg-zinc-50 p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-zinc-900">
+                Refactor and stabilize
+              </h3>
+              <p className="mt-3 text-base leading-7 text-zinc-600">
+                Once the issue is clear, I clean up the structure, reduce risk, and
+                leave the system easier to maintain and safer to change.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INTERNAL TOOLS */}
+      <section className="border-t border-zinc-200 bg-zinc-50 px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-600">
+            Internal Tools
+          </p>
+
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+            Tools I built to manage debugging and backend work
+          </h2>
+
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-zinc-600">
+            While building BackendRescue, I created internal tools to organize debugging
+            tasks, refactoring work, and QA checks across projects. These tools help keep
+            complex systems understandable and manageable during active development.
+          </p>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+
+            <div className="rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
+
+              <h3 className="text-2xl font-semibold text-zinc-900">
+                TrackQA
+              </h3>
+
+              <p className="mt-4 text-base leading-7 text-zinc-600">
+                TrackQA is an internal workflow system built to track debugging tasks,
+                refactors, technical debt, and QA checks across BackendRescue projects.
+                It organizes development work into structured tickets so issues can be
+                investigated, resolved, and verified clearly.
+              </p>
+
+              <div className="mt-6">
+                <a
+                  href="/case-studies/trackqa"
+                  className="inline-flex items-center rounded-lg bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-700"
+                >
+                  View Case Study
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
       </section>
 

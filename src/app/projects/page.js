@@ -7,7 +7,7 @@ const projects = [
     github:
       "https://github.com/curtis-fawcett/backendrescue-refactor-case-study",
     image: "/projects/backend-architecture-refactor.png",
-    caseStudy: "/case-study/backend-architecture-refactor",
+    caseStudy: "/case-study/backendrescue-architecture-refactor",
   },
   {
     title: "TrackQA Internal Workflow System",
@@ -16,7 +16,7 @@ const projects = [
     tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/curtis-fawcett/TrackQA",
     image: "/projects/trackqa.png",
-    caseStudy: "/case-study/trackqa",
+    caseStudy: "/case-study/trackqa-internal",
   },
   {
     title: "BackendRescue Website",

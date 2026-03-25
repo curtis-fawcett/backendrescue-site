@@ -68,7 +68,7 @@ export default function TrackQACaseStudy() {
 
   const challenges = [
     "Fixing blank ticket-page rendering caused by routing and state issues",
-    "Making Local Storage persistence sync reliably across views",
+    "Making local storage persistence sync reliably across views",
     "Conditionally rendering sections like QA Verification only when relevant",
     "Locking key fields after creation to prevent accidental history loss",
     "Tracking meaningful ticket changes inside the activity log",
@@ -85,7 +85,7 @@ export default function TrackQACaseStudy() {
   ];
 
   const futureImprovements = [
-    "Move from Local Storage to a database-backed architecture",
+    "Move from local storage to a database-backed architecture",
     "Add authentication and user accounts",
     "Support multi-user projects and shared workspaces",
     "Create a backend API for ticket and activity data",
@@ -101,7 +101,7 @@ export default function TrackQACaseStudy() {
           href="/projects"
           className="inline-flex items-center rounded-xl border border-slate-700 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-300 transition hover:border-slate-600 hover:text-white"
         >
-          ← Back to Projects
+          ← Back to Case Studies
         </a>
 
         <section className="mt-6 rounded-[28px] border border-slate-800 bg-gradient-to-b from-slate-900/95 to-slate-950/95 p-8 shadow-[0_20px_60px_rgba(0,0,0,0.28)] md:p-10">
@@ -115,15 +115,19 @@ export default function TrackQACaseStudy() {
                 TrackQA – Internal QA & Debugging Workflow Tool
               </h1>
 
+              <p className="mt-3 text-sm text-slate-500">
+                Last Updated: March 2026
+              </p>
+
               <p className="mt-5 max-w-3xl text-base leading-8 text-slate-400 md:text-lg">
                 TrackQA is an internal workflow tool I built to organize
-                debugging tasks, QA verification, refactoring work, and technical
-                debt. While building and improving software, I needed a more
-                structured way to track issues across multiple stages without
-                relying on scattered notes or heavyweight project-management
-                tools. TrackQA was designed to make internal work more visible,
-                more traceable, and easier to move from investigation to
-                verification.
+                debugging tasks, QA verification, refactoring work, and
+                technical debt. While building and improving software, I needed
+                a more structured way to track issues across multiple stages
+                without relying on scattered notes or heavyweight project
+                management tools. TrackQA was designed to make internal work
+                more visible, more traceable, and easier to move from
+                investigation to verification.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
@@ -277,13 +281,14 @@ export default function TrackQACaseStudy() {
         </Section>
 
         <Section
-          title="Project Links"
-          subtitle="This case study is based on the working internal application and a private internal codebase."
+          title="References"
+          subtitle="This case study connects to the working internal application and related engineering investigations."
         >
           <div className="rounded-[22px] border border-slate-800 bg-slate-950/90 p-6">
             <ul className="list-disc space-y-3 pl-5 text-slate-400">
-              <li>Repository: Private internal repository available upon request</li>
-              <li>Live Demo: Internal tool, not publicly deployed</li>
+              <li>Related System: TrackQA Internal QA & Debugging Workflow Tool</li>
+              <li>Repository: trackqa-internal</li>
+              <li>Related Case Studies: Debugging, state management, workflow design, and backend migration</li>
             </ul>
           </div>
         </Section>
